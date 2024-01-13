@@ -1,0 +1,49 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Montserratt";
+}
+
+.container{
+  background-color: #FFFFFF;
+  box-shadow-ge: -30px 20px 100px 10px rgba(251, 24, 78, 0.47) rgba(0, 87, 255, 0.47);
+
+}
+.title{
+  color: #2B2B2B;
+text-align: center;
+font-family: Montserrat;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+input{
+  border: 1px solid #2B2B2B;
+}
+input::placeholder{
+  font-family: Montserrat;
+}
+.operations{
+  background-color: #2B2B2B;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.success{
+  font-weight: 700;
+  color:#0057FF ;
+  font-family: Montserrat;
+}
+p{
+  font-weight: 700;
+  font-family: Montserrat;
+}
