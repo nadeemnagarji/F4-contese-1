@@ -3,15 +3,15 @@ import React, { useState } from 'react';
 
 export default function Calculator() {
     
-    let [input1,setInput1] = useState(0)
-    let [input2,setInput2] = useState(0)
+    let [input1,setInput1] = useState(null)
+    let [input2,setInput2] = useState(null)
     let [ans,setAns] = useState(null)
     let [success,setSucess] = useState(null)
     let [emptyInput,setEmptyInput] = useState(null)
 
 
     function handleEmptyMessage (){
-        if(input1===""){
+        if(input1==="" || input1===null){
            
             setEmptyInput("Num1 Cannot Be Empty")
         }else{
@@ -21,7 +21,7 @@ export default function Calculator() {
 
     let Addition = ()=>{
 
-        if(input1==="" || input2===""){
+        if(input1==="" || input2==="" || input1===null || input2===null){
             setSucess(false)
             handleEmptyMessage()
             return
@@ -33,7 +33,7 @@ export default function Calculator() {
     }
     let Substraction= ()=>{
           
-        if(input1==="" || input2===""){
+        if(input1==="" || input2==="" || input1===null || input2===null){
             setSucess(false)
             handleEmptyMessage()
             return
@@ -44,7 +44,7 @@ export default function Calculator() {
     }
     let Multiply = ()=>{
           
-        if(input1==="" || input2===""){
+        if(input1==="" || input2==="" || input1===null || input2===null){
             setSucess(false)
             handleEmptyMessage()
             return
@@ -55,7 +55,7 @@ export default function Calculator() {
     }
     let Divide = ()=>{
           
-        if(input1==="" || input2===""){
+        if(input1==="" || input2==="" || input1===null || input2===null){
             setSucess(false)
             handleEmptyMessage()
             return
@@ -67,7 +67,7 @@ export default function Calculator() {
 
     return (
         <>
-        <div className='container flex flex-col justify-between items-center p-8 w-96 h-max m-auto mt-16 rounded-3xl'>
+        <div className='container flex flex-col justify-between items-center p-8 w-96 h-max m-auto mt-16 rounded-3xl '>
         <h3 className='title mb-5'>React Calculator</h3>
         <div className='inputs  flex flex-col justify-between gap-5'>
         <input type="text" className="placeholder:font-bold placeholder:text-black placeholder:p-2 p-1" placeholder='Num 1' onChange={(e)=>{setInput1(e.target.value)}} />
